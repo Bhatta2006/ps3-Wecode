@@ -3,7 +3,8 @@ import numpy as np
 import os
 
 # Path to the hackathon-provided raw datasets
-DATA_DIR = r"d:\TradeLab-main\ps3-Wecode\data\raw"
+# Derived relative to this file: backend/app/services/ → ../../.. → ps3-Wecode/ → data/raw/
+DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "..", "data", "raw")
 
 # ─── In-memory cache (loaded once on first call) ───────────────────────────────
 _MERGED_DF = None
